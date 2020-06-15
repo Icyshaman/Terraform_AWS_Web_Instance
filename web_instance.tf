@@ -145,7 +145,7 @@ resource "aws_s3_bucket_object" "object_upload"{
 resource "aws_cloudfront_distribution" "cloudfront1"{
 	origin{
 		domain_name	= aws_s3_bucket.object_storage1.bucket_regional_domain_name
-		origin_id	= "s3-${aws_s3_bucket.object_storage1.bucket}"
+		origin_id	= "S3-${aws_s3_bucket.object_storage1.bucket}"
 		
 		custom_origin_config{
 			http_port		= 80
@@ -160,7 +160,7 @@ resource "aws_cloudfront_distribution" "cloudfront1"{
 	default_cache_behavior{
 		allowed_methods		= [ "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT" ]
 		cached_methods		= [ "GET", "HEAD" ]
-		target_origin_id	= "s3-${aws_s3_bucket.object_storage1.bucket}"
+		target_origin_id	= "S3-${aws_s3_bucket.object_storage1.bucket}"
 		
 		forwarded_values{
 			query_string	= false
