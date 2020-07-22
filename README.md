@@ -2,7 +2,7 @@
 >**Overview**
 * [web_instance.tf](https://github.com/Icyshaman/Terraform_AWS_Web_Instance/blob/master/web_instance.tf) is a terraform file which will perform following task:
     
-    * Create a key and a security group which allow port 22 and port 80.
+    * Creates a key and a security group which allow port 22 and port 80.
     
     * Launch EC2 instance using key and security group created by code itself.
 
@@ -10,9 +10,9 @@
 
     * Copy the github repo code (mentioned in terraform file) into /var/www/html.
 
-    * Create s3 bucket and copy/deploy images from github repo into the s3 bucket and change the permission to public readable.
+    * Creates S3 bucket and copy/deploy images from github repo into the S3 bucket and change the permission to public readable.
 
-    * Create a CloudFront using s3 bucket.
+    * Creates a CloudFront using s3 bucket.
 ***
 >**Steps to use**
 * Copy [web_instance.tf](https://github.com/Icyshaman/Terraform_AWS_Web_Instance/blob/master/web_instance.tf) to your local system.
